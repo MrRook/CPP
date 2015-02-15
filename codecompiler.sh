@@ -6,7 +6,7 @@ question=$4
 #compile phase
 error=1
 
-$compiler ${uid}.cpp -o ${uid}.out 2>${uid}.output  && error=0
+$compiler ${uid}.cpp -lm -o ${uid}.out 2>${uid}.output  && error=0
 
 #check if compilation done
 if [ "$error" == "1" ]; then
